@@ -1,0 +1,4 @@
+parameters:
+  weather_api_key: '%env(WEATHER_API_KEY)%'
+  weather_api_url: 'https://api.weatherapi.com/v1/'
+  weather_log_path: '%kernel.logs_dir%/weather.log'

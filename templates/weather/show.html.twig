@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Погода в {{ weather.city }}{% endblock %}
+
+{% block body %}
+    <h1>Поточна погода в {{ weather.city }}, {{ weather.country }}</h1>
+
+    <div class="weather-info">
+        <p><strong>Температура:</strong> {{ weather.temperature }}°C</p>
+        <p><strong>Стан:</strong> {{ weather.condition }}</p>
+        <p><strong>Вологість:</strong> {{ weather.humidity }}%</p>
+        <p><strong>Швидкість вітру:</strong> {{ weather.windSpeed }} км/год</p>
+        <p><strong>Останнє оновлення:</strong> {{ weather.lastUpdated|date('Y-m-d H:i') }}</p>
+    </div>
+{% endblock %}
